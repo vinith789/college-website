@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./header/image/logo.png">
+  <title>N.S.N COLLEGE OF ENGINEERING AND TECHNOLOGY</title>
+  <link rel="stylesheet" href="./header/header.css">
+  <link rel="stylesheet" href="./header/video.css">
+  <link rel="stylesheet" href="./css/department.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+  <header>
+    <!--Logo content-->
+  <div class="logo">
+    <img src="./header/image/logo.png" alt="NSN Logo">
+    <div class="text-content">
+      <h1 class="title-1">N.S.N COLLEGE OF ENGINEERING</h1>
+      <h1 class="title-2">AND TECHNOLOGY</h1>
+      <p>N.S.N Kalvi Nagar, Karur- Madurai NH-7, Manalmedu, Karur - 639 003,TN, India</p>
+      <p>(Approved by AICTE, New Delhi, Affiliated to Anna University, Chennai)</p>
+    </div>
+    <!-- Toggle Icon -->
+    <div class="toggle-bar">
+      <div class="toggle-icon">&#9776;</div>
+      <div class="close-icon">&times;</div>
+    </div>
+    <!-- Rank Section -->
+    <div class="rank-section">
+      <div class="rank-content">
+        <span class="rank-title">19th Rank in</span><br>
+        <span class="rank-subtitle">Anna University</span>
+      </div>
+    </div>
+  </div>
+    <!--Logo content End-->
+  <!-- Background Video Content-->
+  <div class="video-container">
+    <video autoplay muted loop class="background-video" id="background-video">
+        <source src="./header/video/big_buck_bunny_720p_5mb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!--Video Overlay Content-->
+    <div class="video-overlay"></div>
+    <!--Video Overlay Content End-->
+
+    <!--Card Content-->
+    <div class="card-container">
+      <div class="card" id="card1">
+          <h1>Card Title 1</h1>
+          <p>This is some content inside the first transparent card.</p>
+          <a href="https://example.com/page1" class="cta-button">Visit Link 1</a>
+      </div>
+      <div class="card" id="card2">
+          <h1>Card Title 2</h1>
+          <p>This is some content inside the second transparent card.</p>
+          <a href="https://example.com/page2" class="cta-button">Visit Link 2</a>
+      </div>
+      <div class="card" id="card3">
+          <h1>Card Title 3</h1>
+          <p>This is some content inside the third transparent card.</p>
+          <a href="https://example.com/page3" class="cta-button">Visit Link 3</a>
+      </div>
+    </div>
+    <!--Card Content End-->
+  </div>
+  <!--Background Video Content End-->
+
+<!--Marquee Content-->
+  <div class="scrolling-content">
+    <div class="button-container">
+      <button class="marquee-button">Home</button>
+      <button class="marquee-button">Admissions</button>
+      <button class="marquee-button">Courses</button>
+      <button class="marquee-button">Contact Us</button>
+    </div>
+    <div class="marquee-wrapper">
+      <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" class="marquee-text">
+        Admissions Open for 2025-2026! Apply Now. | TNEA Counselling Code 2327...
+      </marquee>
+    </div>
+  </div>
+<!--Marquee Content End-->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="./home.html" >Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./management.html">Administration</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="./dpt.html" class="active">Departments</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Placement</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar End-->
+</header>
+
+<section class="departments-pages">
+  <div class="dpt-container">
+    <!-- Navbar -->
+    <div class="tab_box">
+        <button class="tab_btn">Home</button>
+        <button class="tab_btn active">Department</button>
+        <button class="tab_btn">Faculty Members</button>
+        <button class="tab_btn">Association</button>
+        <div class="line"></div>
+    </div>
+    <div class="content_box">
+        <!-- Department Content -->
+        <div class="dpt-layout animate-slide-up active" id="department-content">
+            <!-- Image Section -->
+            <div class="dpt-image-section">
+                <img src="" alt="Department Image" id="department-image" />
+            </div>
+
+            <!-- Text Content Section -->
+            <div class="dpt-text-section">
+                <h1 id="department-title">Department Title</h1>
+                <p id="department-description"></p>
+            </div>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="dpt-cards-section animate-slide-up" id="department-cards"></div>
+
+
+        <!-- Faculty Members Content -->
+        <div id="dpt-faculty-content" class="dpt-layout animate-fade-in" style="display: none;">
+            <h1>Faculty Members</h1>
+            <p>Here you can list faculty members or related content.</p>
+        </div>
+
+        <!-- Association Content -->
+        <div id="dpt-association-content" class="dpt-layout animate-fade-in" style="display: none;">
+            <h1>Association</h1>
+            <p>Details about the association go here.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="footer-1">
+  <div class="bottom-navbar">
+    <a href="#">Online Grievance-Redressal</a> |
+    <a href="#">Extension Of Approvals</a> |
+    <a href="#">AICTE Mandatory Documents</a> |
+    <a href="#">Mandatory Disclosure</a>
+  </div>
+</section>
+
+
+
+</body>
+
+<script src="./header/header.js"></script>
+<script src="./js/department.js"></script>
+</html>

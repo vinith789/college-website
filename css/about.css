@@ -1,0 +1,184 @@
+/* Main card styling */
+.about-main-card {
+  max-width: 95%;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  flex-wrap: wrap; /* Stacks content if space is limited */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.about-main-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Video content styling */
+.about-video-card {
+  flex: .8;
+  max-height: 500px; /* Restrict height */
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #d1ffe7, #a8f4c8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #3cb371;
+}
+.about-video-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+/* Video badge styling */
+.about-video-card::before {
+  content: "Featured Video";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(60, 179, 113, 0.9);
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  z-index: 2;
+}
+/* About text content styling */
+.about-text-content {
+  flex: 1;
+}
+.about-text-content h2 {
+  font-size: 1.5em;
+  color: #36a66e;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.about-text-content h1 {
+  font-size: 2em;
+  color: #2b542e;
+  margin: 10px 0;
+}
+.about-text-content p {
+  font-size: 1em; /* Reduced font size for better readability */
+  color: #4d604f;
+  line-height: 1.5;
+}
+.about-cards-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns by default */
+  gap: 20px;
+  max-width: 95%;
+  margin: 30px auto;
+}
+.about-info-card {
+  display: flex;
+  background: linear-gradient(135deg, #b3e6b3, #80cc80);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  position: relative;
+}
+.about-info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+/* Left content inside info card */
+.about-left-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  align-items: center; /* Horizontally center the content */
+  text-align: center; /* Ensure text is centered */
+  height: 100%; /* Take up full height of the parent container */
+}
+.about-left-content img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid #36a66e;
+  transition: transform 0.3s;
+}
+.about-left-content img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+/* Last card styling (for the fifth card in the grid) */
+.about-info-card:nth-child(5) {
+  width: 100%;
+  margin-left: 400px;
+}
+.about-left-content h3 {
+  font-size: 1.5em;
+  color: #2b542e;
+  background: #d1ffe7;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+/* Vertical divider line */
+.about-vertical-line {
+  width: 4px;
+  background: #36a66e;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+/* Right content styling */
+.about-right-content {
+  flex: 2;
+}
+.about-right-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.about-right-content ul li {
+  font-size: 1em;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: #4d604f;
+}
+.about-right-content ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #36a66e;
+  font-weight: bold;
+}
+/* Responsive design */
+@media (max-width: 767px) {
+  .about-main-card {
+    flex-direction: column-reverse; /* Video first, then text */
+  }
+  .about-video-card iframe {
+    width: 100%;
+    height: 240px;
+  }
+  .about-cards-section {
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 15px; /* Adjust gap between cards */
+  }
+  /* Each card should take the full width */
+  .about-info-card {
+    width: 90%; /* Full width for each card */
+    margin: 0 auto; /* Center the card */
+    flex-direction: column; /* Stack card content */
+    padding: 15px; /* Adjust padding */
+  }
+  /* Adjust image size for smaller screens */
+  .about-left-content img {
+    width: 100px;
+    height: 100px;
+  }
+  /* Hide the vertical divider on smaller screens */
+  .about-vertical-line {
+    display: none;
+  }
+}

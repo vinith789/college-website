@@ -1,0 +1,195 @@
+
+.departments-pages {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column; /* Allows stacking of navbar and content */
+  justify-content: flex-start; /* Content adjusts relative to the top */
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+/* Main Container */
+.dpt-container {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar (Tab Box) */
+.tab_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-around; /* Align items to the left for scrolling */
+  align-items: center;
+  background-color: white; /* Background for clarity */
+  border-bottom: 2px solid #f0f0f0; /* Light divider below navbar */
+  position: sticky; /* Navbar sticks at the top */
+  top: 0;
+  z-index: 10; /* Ensures it stays above other elements */
+  padding: 0; /* Removes default padding */
+  height: 60px; /* Fixed height for consistent layout */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent content from wrapping */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+/* Hide scrollbar for Webkit (Chrome, Safari) */
+.tab_box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar Buttons */
+.tab_box .tab_btn {
+  font-size: 16px;
+  font-weight: 600;
+  color: #919191;
+  background: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+/* Active State for Navbar Buttons */
+.tab_btn.active {
+  color: green;
+}
+
+.tab_btn.active {
+  color: green;
+}
+
+.line {
+  position: absolute;
+  border-radius: 10px;
+  bottom: -2px;
+  left: 0;
+  width: 100px;
+  height: 8px;
+  background-color: green;
+  transition: all 0.3s ease-in-out;
+}
+
+.content_box {
+  width: 100%;
+  max-width: 1500px;
+  padding: 20px;
+  margin-top: 10px; /* Ensures spacing between navbar and content */
+}
+
+/* Content Layout */
+.dpt-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.dpt-image-section {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.dpt-image-section img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.dpt-text-section {
+  flex: 2;
+  padding: 20px;
+}
+
+.dpt-text-section h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.dpt-text-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Cards */
+.dpt-cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.department-cards-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between the cards */
+  flex-wrap: wrap; /* Ensure they wrap on smaller screens */
+}
+
+.department-card {
+  background: linear-gradient(135deg, #b3e6b3, #80cc80);
+  padding: 20px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px); /* Each card takes up 50% width */
+  margin-bottom: 20px; /* Add space between rows */
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: pointer;
+  position: relative;
+}
+.department-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.department-info-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px;
+}
+
+.department-info-item {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  color: #4d604f;
+}
+.department-info-item::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #36a66e;
+  font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .line {
+    width: 90px;
+    height: 5px;
+  }
+  .content_box {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+  .dpt-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dpt-image-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .info-card {
+    flex: 1 1 100%;
+  }
+}

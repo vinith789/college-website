@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+/* Logo container */
+.logo {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+/* Logo image */
+.logo img {
+  margin-left: 85px;
+  width: 80px;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.logo img:hover {
+  opacity: 1; /* Make the logo fully visible on hover */
+}
+/* Center text content */
+.text-content {
+  text-align: center;
+  flex-grow: 1; /* Take up the remaining space between logo and rank section */
+}
+/* Title and paragraph styling */
+.title-1, .title-2, p {
+  margin: 0;
+}
+.title-1 {
+  color: #eb4e35;
+  font-weight: bold;
+  font-size: 24px;
+}
+.title-2 {
+  color: #2f7436;
+  font-weight: bold;
+  font-size: 24px;
+}
+.text-content p {
+  font-size: 16px;
+  color: black;
+}
+/* Rank Section Styling */
+.rank-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+/* Rank Content */
+.rank-content {
+  text-align: right;
+  animation: pulse 1.5s infinite;
+}
+/* Rank Title */
+.rank-title {
+  margin-right: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #eb4e35;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+/* Rank Subtitle */
+.rank-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  letter-spacing: 1px;
+}
+/* toggle bar */
+.toggle-bar {
+  display: none;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 100;
+}
+.toggle-icon, .close-icon {
+  font-size: 32px;
+  color: black;
+  cursor: pointer;
+}
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Styling for marquee content */
+.scrolling-content {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e0f2f1;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden; /* Hide any overflow from the marquee */
+}
+/* Button container styling */
+.button-container {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  z-index: 1; /* Ensure buttons are above the scrolling text */
+  background-color: #e0f2f1;
+  padding: 0 10px;
+}
+/* Marquee wrapper styling */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* Marquee text styling */
+.marquee-text {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line breaks */
+  margin-left: 70px; /* Ensure space for buttons */
+}
+.marquee-text:hover{
+  cursor: pointer;
+  color: #eb4e35;
+}
+/* Marquee button styling */
+.marquee-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+/* Button hover effect */
+.marquee-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+/* Navbar styling */
+.navbar {
+  display: block;
+  background-color: #28a745;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+/* Navbar list styling */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+/* Navbar list items styling */
+.navbar li {
+  margin: 0 15px; /* Space between navbar items */
+  position: relative;
+}
+/* Navbar links styling */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  position: relative;
+  display: inline-block;
+}
+/* Navbar link hover effect */
+.navbar a:hover {
+  background-color: #218838;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+/* Active link styling */
+.navbar a.active {
+  background-color: #1e7e34;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for active state */
+  transform: scale(1.1);
+  position: relative; /* Required for ::before to work properly */
+}
+/* Animation for navbar links on hover */
+.navbar a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff; /* Underline color */
+  transition: width 0.4s ease, left 0.4s ease;
+  transform: translateX(-50%);
+}
+/* Underline effect on hover */
+.navbar a:hover::before {
+  width: 100%;
+  left: 10;
+}
+/* Permanent underline for the active link */
+.navbar a.active::before {
+  width: 100%;
+  left: 10;
+}
+
+/* home styles */
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider{
+  background: url(./images/image-1.jpg);
+  background-size: cover;
+  height: 450px;
+  width: 800px;
+  box-shadow: 0px 5px 8px rgba(0,0,0,.3);
+  animation: animate 20s infinite;
+}
+@keyframes animate{
+  20%{
+    background: url(./images/image-2.jpg);
+    background-size: cover;
+  }
+  40%{
+    background: url(./images/image-3.jpg);
+    background-size: cover;
+  }
+  60%{
+    background: url(./images/image-4.png);
+    background-size: cover;
+  }
+  80%{
+    background: url(./images/image-5.jpg);
+    background-size: cover;
+  }
+  100%{
+    background: url(./images/image-6.png);
+    background-size: cover;
+  }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1266px) {
+  /* Navbar styling */
+  .navbar li {
+    margin: 0 8px; /* Adjust spacing to fit items */
+  }
+  /* Navbar links styling */
+  .navbar a {
+    font-size: 14px; /* Adjust font size */
+    padding: 8px 10px; /* Adjust padding */
+    border-radius: 5px;
+  }
+  .center{
+    margin-top: 25%;
+    position: fixed;
+  }
+}
+/* Ensuring navbar content remains in one line for widths 1055px and below */
+@media (max-width: 1024px) {
+  .logo img{
+    margin-left: 10px;
+  }
+  .text-content p{
+    font-size: 12px;
+  }
+  .rank-title{
+    font-size: 18px;
+  }
+  .rank-subtitle{
+    font-size: 18px;
+  }
+  .navbar ul {
+    flex-wrap: nowrap;
+  }
+  .navbar li {
+    margin: 0 4px;
+  }
+  .navbar a {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .close-icon{
+    display: none;
+   }
+     /* toggle bar content */
+  .toggle-bar {
+    display: flex;
+  }
+  .card-container {
+    display: none !important; /* Ensure the card content is hidden below 775px */
+  }
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo img {
+    margin-left:25px;
+  }
+  .text-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .text-content p{
+    font-size: 12px;
+  }
+  .rank-title{
+    font-size: 22px;
+  }
+  .rank-subtitle{
+    font-size: 24px;
+  }
+  .rank-section {
+    margin-left: 10px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .navbar ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar li {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  .navbar a {
+    font-size: 14px;
+    padding: 10px 15px;
+    color: #333;
+  }
+  .navbar a:hover {
+    background-color: #28a745;
+  }
+  .marquee-wrapper {
+    overflow: hidden;
+  }
+  .marquee-text {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  .marquee-button {
+    font-size: 10px;
+    padding: 4px 8px;
+    width: auto;
+  }
+  /* Compress the entire marquee container */
+  .scrolling-content {
+    padding: 5px 0;
+  }
+  .button-container{
+    margin-left: -20px;
+  }
+  .marquee-container {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .video-container {
+    height: 40%;
+  }
+  .logo img {
+    margin-left: 5px;
+    width: 65px;
+  }
+  .text-content h1{
+    font-size: 18px;
+  }
+  header .text-content p{
+    display: none;
+  }
+  .rank-title{
+    font-size: 18px;
+  }
+  .rank-subtitle{
+    font-size: 18px;
+  }
+  .scrolling-content {
+    background-color: white;
+    margin-top: -10px;
+  }
+  .button-container {
+    background-color: #e0f2f1;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    width: 100%;
+    padding: 5px;
+   }
+  .marquee-button {
+    font-size: 10px;
+    padding: 4px 8px;
+    width: auto;
+  }
+  .marquee-wrapper {
+    margin-top: 55px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .marquee-text {
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: nowrap;
+    width: 100%;
+    margin-left: 10px;
+  }
+}

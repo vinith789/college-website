@@ -1,0 +1,277 @@
+.navbar-container {
+  width: 100%; /* Ensure it spans the full width */
+  background-color: white;
+  padding: 0; /* Remove padding inside the navbar */
+  margin: 0; /* Remove any margin around the navbar */
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tab_box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.tab_btn {
+  font-size: 18px;
+  font-weight: 600;
+  color: #919191;
+  background: none;
+  border: none;
+  padding: 18px;
+  cursor: pointer;
+}
+.content_box {
+  padding: 20px;
+}
+.content_box .navbar-content {
+  display: none;
+  animation: moving 0.5s ease;
+}
+@keyframes moving {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.content_box .navbar-content.active {
+  display: block;
+}
+.content_box .navbar-content h2 {
+  margin-bottom: 10px;
+}
+.tab_box .tab_btn.active {
+  color: green;
+}
+.navbar-line {
+  position: absolute;
+  border-radius: 10px;
+  top: 50px;
+  left: 0;
+  width: 95px;
+  height: 5px;
+  background-color: green;
+  transition: all 0.3s ease-in-out;
+}
+.management-container {
+  display: flex;
+  flex-direction: column; /* Stack card and buttons vertically */
+  align-items: center; /* Center items horizontally */
+  width: 100%; /* Full width */
+  padding: 20px; /* Add some padding to the container */
+}
+.management-card {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out image and text */
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin: 20px auto; /* Center card with auto margins */
+  width: 95%;
+  max-width: 1300px;
+  height: auto; /* Make height auto to accommodate content */
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Include opacity transition */
+  opacity: 0; /* Initial opacity */
+  position: relative; /* Make it relative for button positioning */
+}
+.management-card:hover {
+  transform: translateY(-15px); /* Slight lift on hover */
+}
+.management-card.show {
+  opacity: 1; /* Show card when class is added */
+}
+.management-card img {
+  width: 250px; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  margin-right: 20px; /* Space between image and text */
+}
+.management-card-content {
+  flex: 1; /* Allow text content to take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-start; /* Align text to the left */
+  padding: 25px;
+  text-align: left; /* Align text to the left */
+}
+.management-card-content h2 {
+  color: #333;
+  font-size: 32px;
+  margin: 0;
+}
+.management-card-content h4 {
+  color: #555;
+  font-size: 24px;
+  margin: 10px 0;
+}
+.management-card-content p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Space below paragraph */
+}
+.management-button-section {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px; /* Space above buttons */
+}
+/* Individual button styling */
+.management-content-button {
+  width: 30px; /* Increased button size */
+  height: 30px; /* Increased button size */
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.management-content-button.active {
+  background-color: #4CAF50; /* Green color when active */
+  border-color: #4CAF50; /* Green border when active */
+}
+.director-princple-container {
+  width: 100%;
+  max-width: 1400px; /* Set a max-width for larger screens */
+  padding: 20px;
+}
+
+/* Card styling */
+.director-princple-card {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: white;
+  margin: 20px auto; /* Center card with auto margins */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 95%;
+  max-width: 1300px;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.director-princple-card:hover {
+  transform: translateY(-15px); /* Slight lift on hover */
+}
+
+/* Image styling */
+.card-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Content styling */
+.director-princple-card-content {
+  flex: 1; /* Allow text content to take up remaining space */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: flex-start; /* Align text to the left */
+  padding: 25px;
+  text-align: left; /* Align text to the left */
+}
+
+.director-princple-card-content h2 {
+  color: #333;
+  font-size: 32px;
+  margin: 0;
+}
+
+.director-princple-card-content h4 {
+  color: #555;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.director-princple-card-content p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px; /* Space below paragraph */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .tab_box .tab_btn{
+    font-size: 14px;
+  }
+  .navbar-line {
+    width: 85px;
+    height: 4px;
+  }
+  .management-card {
+    flex-direction: column; /* Stack image and text vertically on mobile */
+    align-items: center; /* Center items horizontally */
+    height: auto; /* Adjust height for content */
+    padding: 15px;
+}
+.management-card img {
+    margin: 0 20px 20px; /* Space below image */
+    width: 80%; /* Make image responsive */
+    max-width: 200px; /* Limit image size */
+}
+.management-card-content {
+    align-items: center; /* Center text content on mobile */
+    text-align: center; /* Center text alignment */
+    padding: 0; /* Remove padding on mobile */
+}
+.management-card-content h2 {
+    font-size: 24px; /* Reduce font size for mobile */
+}
+.management-card-content h4 {
+    font-size: 18px; /* Reduce font size for mobile */
+}
+.management-card-content p {
+    font-size: 16px; /* Reduce font size for mobile */
+}
+/* Make buttons horizontal and smaller on mobile */
+.management-button-section {
+    flex-direction: row;
+    margin-top: 15px;
+    gap: 5px;
+}
+.management-content-button {
+    width: 20px; /* Smaller button size for mobile */
+    height: 20px; /* Smaller button size for mobile */
+}
+.director-princple-card {
+  flex-direction: column; /* Stack image and text vertically on mobile */
+  align-items: center; /* Center items horizontally */
+  height: auto; /* Adjust height for content */
+  padding: 15px;
+}
+
+.director-princple-card .card-image {
+  margin: 0 20px 20px; /* Space below image */
+  width: 80%; /* Make image responsive */
+  max-width: 200px; /* Limit image size */
+}
+
+.director-princple-card-content {
+align-items: center; /* Center text content on mobile */
+text-align: center;
+padding: 0;
+}
+
+.director-princple-card-content h2 {
+font-size: 24px;
+}
+
+.director-princple-card-content h4 {
+font-size: 18px;
+}
+
+.director-princple-card-content p {
+font-size: 16px;
+}
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./header/image/logo.png">
+  <title>N.S.N COLLEGE OF ENGINEERING AND TECHNOLOGY</title>
+  <link rel="stylesheet" href="./header/header.css">
+  <link rel="stylesheet" href="./header/video.css">
+  <link rel="stylesheet" href="./css/management.css">
+  <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+  <header>
+    <!--Logo content-->
+  <div class="logo">
+    <img src="./header/image/logo.png" alt="NSN Logo">
+    <div class="text-content">
+      <h1 class="title-1">N.S.N COLLEGE OF ENGINEERING</h1>
+      <h1 class="title-2">AND TECHNOLOGY</h1>
+      <p>N.S.N Kalvi Nagar, Karur- Madurai NH-7, Manalmedu, Karur - 639 003,TN, India</p>
+      <p>(Approved by AICTE, New Delhi, Affiliated to Anna University, Chennai)</p>
+    </div>
+    <!-- Toggle Icon -->
+    <div class="toggle-bar">
+      <div class="toggle-icon">&#9776;</div>
+      <div class="close-icon">&times;</div>
+    </div>
+    <!-- Rank Section -->
+    <div class="rank-section">
+      <div class="rank-content">
+        <span class="rank-title">19th Rank in</span><br>
+        <span class="rank-subtitle">Anna University</span>
+      </div>
+    </div>
+  </div>
+    <!--Logo content End-->
+  <!-- Background Video Content-->
+  <div class="video-container">
+    <video autoplay muted loop class="background-video" id="background-video">
+        <source src="./header/video/big_buck_bunny_720p_5mb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!--Video Overlay Content-->
+    <div class="video-overlay"></div>
+    <!--Video Overlay Content End-->
+
+    <!--Card Content-->
+    <div class="card-container">
+      <div class="card" id="card1">
+          <h1>Card Title 1</h1>
+          <p>This is some content inside the first transparent card.</p>
+          <a href="https://example.com/page1" class="cta-button">Visit Link 1</a>
+      </div>
+      <div class="card" id="card2">
+          <h1>Card Title 2</h1>
+          <p>This is some content inside the second transparent card.</p>
+          <a href="https://example.com/page2" class="cta-button">Visit Link 2</a>
+      </div>
+      <div class="card" id="card3">
+          <h1>Card Title 3</h1>
+          <p>This is some content inside the third transparent card.</p>
+          <a href="https://example.com/page3" class="cta-button">Visit Link 3</a>
+      </div>
+    </div>
+    <!--Card Content End-->
+  </div>
+  <!--Background Video Content End-->
+
+<!--Marquee Content-->
+  <div class="scrolling-content">
+    <div class="button-container">
+      <button class="marquee-button">Home</button>
+      <button class="marquee-button">Admissions</button>
+      <button class="marquee-button">Courses</button>
+      <button class="marquee-button">Contact Us</button>
+    </div>
+    <div class="marquee-wrapper">
+      <marquee behavior="scroll" direction="left" scrollamount="6" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" class="marquee-text">
+        Admissions Open for 2025-2026! Apply Now. | TNEA Counselling Code 2327...
+      </marquee>
+    </div>
+  </div>
+<!--Marquee Content End-->
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="./management.html" class="active">Administration</a></li>
+        <li><a href="#">Academics</a></li>
+        <li><a href="#">Admission</a></li>
+        <li><a href="./dpt.html">Departments</a></li>
+        <li><a href="#">Facilities</a></li>
+        <li><a href="#">Placement</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar End-->
+</header>
+
+<section class="management-page">
+  <!--NavBar Content-->
+    <div class="navbar-container">
+      <!--NavBar Button-->
+        <div class="tab_box">
+            <button class="tab_btn active">Management</button>
+            <button class="tab_btn">Director</button>
+            <button class="tab_btn">Principal's Message</button>
+          <!--Line Content-->
+            <div class="navbar-line">
+            </div>
+          <!--Line Content End-->
+        </div>
+      <!--NavBar Button End-->
+
+      <!--Page Content-->
+        <div class="content_box">
+          <div class="navbar-content active">
+            <div class="management-container">
+              <div id="management-display-card" class="management-card"></div>
+              <div class="management-button-section"></div>
+            </div>
+          </div>
+          <div class="navbar-content">
+            <div class="director-princple-content">
+              <!-- Display card with image and text content -->
+              <div class="director-princple-card">
+                  <img src="./Frame 1.png" alt="Chairman Image" class="card-image">
+                  <div class="director-princple-card-content">
+                      <h2>Director</h2>
+                      <h4>Head of the Organization</h4>
+                      <p>This is the Chairman's description. Include details and information about the Chairman here.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-content">
+            <div class="director-princple-content">
+              <!-- Display card with image and text content -->
+              <div class="director-princple-card">
+                  <img src="./Frame 1.png" alt="Chairman Image" class="card-image">
+                  <div class="director-princple-card-content">
+                      <h2>Principal</h2>
+                      <h4>Head of the Organization</h4>
+                      <p>This is the Chairman's description. Include details and information about the Chairman here.</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!--Page Content End-->
+    </div>
+    <!--NavBar Content End-->
+  </section>
+
+  <section class="footer-1">
+    <div class="bottom-navbar">
+      <a href="#">Online Grievance-Redressal</a> |
+      <a href="#">Extension Of Approvals</a> |
+      <a href="#">AICTE Mandatory Documents</a> |
+      <a href="#">Mandatory Disclosure</a>
+    </div>
+  </section>
+
+</body>
+
+<script src="./header/header.js"></script>
+<script src="./js/management.js"></script>
+</html>
